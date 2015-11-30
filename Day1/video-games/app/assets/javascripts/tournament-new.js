@@ -1,8 +1,8 @@
-function showTournamentForm () {
+function showTournamentForm() {
   $('[data-hook~=tourney-form]').removeClass('hidden')
 }
 
-function createTournament (event) {
+function createTournament(event) {
   event.preventDefault()
 
   var $form = $('[data-hook~=tourney-form]')
@@ -14,13 +14,13 @@ function createTournament (event) {
 
   $formAlerts.empty()
 
-  function showError (error) {
+  function showError(error) {
     console.error('Error adding new tournament.', '\n' + error.responseText)
     var message = 'There was a problem adding the tournament.'
     $formAlerts.prepend(buildErrorHtml(message))
   }
 
-  function respondNewTourney (tourney) {
+  function respondNewTourney(tourney) {
     var message
 
     if (!tourney.id) {
