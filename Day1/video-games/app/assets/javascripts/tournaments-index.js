@@ -1,4 +1,4 @@
-function tournamentsIndex () {
+function tournamentsIndex() {
   var request = $.get('/api/tournaments.json')
   request.fail(showError)
   request.done(showTournaments)
