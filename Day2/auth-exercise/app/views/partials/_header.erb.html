@@ -1,0 +1,6 @@
+<% if current_user %>
+  <h1>Hi <%= current_user.username %></h1>
+<% else %>
+  <%= link_to "Login", "/login" %><br>
+  <%= link_to "Logout", "/logout", method: :destroy %><br>
+<% end %>
